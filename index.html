@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link  href="https://fonts.googleapis.com/css?
+family=Reenie+Beanie:regular" 
+rel="stylesheet" 
+type="text/css">
+  <link rel="stylesheet" href="index.css">
+  <title>Dave965</title>
+  <link  href="https://fonts.googleapis.com/css?family=Comfortaa" 
+rel="stylesheet" 
+type="text/css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <section id = "main" class="section-main ">
+      <div class = "container-main" >
+        <div class = "linea">
+          <p class = "palabra">David</p>
+          <p class = "palabra">Noriega</p>
+        </div>
+        <div class = "linea">
+          <p class = "palabra">full</p> 
+          <p class = "palabra">stack</p> 
+          <p class = "palabra">&</p> 
+        </div>
+        <div class = "linea">
+          <p class = "palabra">Game</p> 
+          <p class = "palabra">Developer</p> 
+        </div>
+        
+        <div class = "linea">
+          <p class = "palabra especial fondo-1" id="p-skills" onclick="cambiar_seccion('main','skills')">→skills</p> 
+          <p class = "palabra especial fondo-2" id="p-works" onclick="cambiar_seccion('main','works')">→works</p> 
+        </div>
+        <div class = "linea">
+          <p class = "palabra especial fondo-3" id="p-refs">→refs</p> 
+          <p class = "palabra especial fondo-4" id="p-contact">→contact</p> 
+        </div>
+      </div>
+  </section>
+
+  <section id = "skills" class="section-skills hidden">
+    <p class="regreso" onclick="cambiar_seccion('skills','main')">←Back</p>
+      <div class = "container-skills">
+        <h1>Skills / Languages</h1>
+        <br>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'html')">html</p>
+          <div class = "redondeado fondo-html"> 100% </div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'js')">Javascript</p>
+          <div class = "redondeado fondo-javascript"> 100%</div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'python')">python</p>
+          <div class = "redondeado fondo-python"> 100%</div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'css')">css</p>
+          <div class = "redondeado fondo-css"> 80%</div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'nodejs')">node js</p>
+          <div class = "redondeado fondo-nodejs">60% </div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'react')">react</p>
+          <div class = "redondeado fondo-react">50% </div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'angular')">angular</p>
+          <div class = "redondeado fondo-angular"> 50%</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'spanish')">spanish</p>
+          <div class = "redondeado fondo-spanish"> 100%</div>
+        </div>
+        <br>
+        <div class = "linea">
+          <p class = "palabra small" onmouseover="permahover(this,'english')">english</p>
+          <div class = "redondeado fondo-english">100% </div>
+        </div>
+      </div>
+  </section>
+  <section id = "works" class="section-works hidden">
+    <p class = "regreso" onclick="cambiar_seccion('works','main')">←Back</p>
+    <div id="myModal" class="modal">
+      <span class="close" onclick="cerrar_modal()">&times;</span>
+      <img class="modal-content" id="img01">
+    </div>
+    <div id ="contenedor-trabajos">
+    </div>
+    <div class = "panel panel_cerrado hidden">
+      <span class= "cerrar-panel" onclick="cerrar_panel(this)">x</span>
+      <div class="panel-interno">
+      <div id = "l-side">
+        <img class ="showcase" src="src/cwe/cwe-1.png" onclick="zoom(this)" />
+        <img class ="showcase" src="src/cwe/cwe-2.png"/>
+        <img class ="showcase" src="src/cwe/cwe-3.png"/>
+        <img class ="showcase" src="src/cwe/cwe-4.png"/>
+        <img class ="showcase" src="src/cwe/cwe-5.png"/>
+      </div>
+      <div id = "r-side">
+        <div id="titulo_panel"></div>
+        <p id ="contenido_panel"></p>
+        <button id="boton_visita">Visita la pagina</button>
+      </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="main.js"></script>
+</html>
