@@ -290,7 +290,7 @@ h1 {
 }
 
 .perma-css + .fondo-css::before{
-  transform: scaleX(0.8);
+  transform: scaleX(1);
   background-size: 200%;
   animation: mover-fondo 5s linear infinite;
 }
@@ -322,7 +322,7 @@ h1 {
 }
 
 .perma-nodejs + .fondo-nodejs::before{
-  transform: scaleX(0.6);
+  transform: scaleX(1);
   background-size: 200%;
   animation: mover-fondo 5s linear infinite;
 }
@@ -354,7 +354,7 @@ h1 {
 }
 
 .perma-react + .fondo-react::before{
-  transform: scaleX(0.5);
+  transform: scaleX(1);
   background-size: 200%;
   animation: mover-fondo 5s linear infinite;
 }
@@ -386,7 +386,7 @@ h1 {
 }
 
 .perma-angular + .fondo-angular::before{
-  transform: scaleX(0.5);
+  transform: scaleX(1);
   background-size: 200%;
   animation: mover-fondo 5s linear infinite;
 }
