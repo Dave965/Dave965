@@ -767,6 +767,117 @@ h1 {
   cursor: pointer;
 }
 
+
+.container-main .oculto{
+  opacity:0;
+  transform: translateX(-50%);
+}
+
+.container-main .muestra{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.container-main .oculto:nth-child(1){
+  transition: all 0.75s;
+}
+
+.container-main .oculto:nth-child(2){
+  transition: all 1s;
+}
+
+.container-main .oculto:nth-child(3){
+  transition: all 1.25s;
+}
+
+
+.container-skills .oculto{
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.container-skills .muestra{
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+.section-skills:has(.oculto){
+  opacity: 0;
+  transition: all 1s;
+}
+
+.section-skills:has(.muestra){
+  opacity: 1;
+}
+
+.container-skills .oculto:nth-child(1){
+  transition: all 1s;
+}
+.container-skills .oculto:nth-child(4){
+  transition: all 1s;
+}
+
+.container-skills .oculto:nth-child(6) {
+  transition: all 1.25s;
+}
+
+.container-skills .oculto:nth-child(8){
+  transition: all 1.55s;
+}
+
+.container-skills .oculto:nth-child(10){
+  transition: all 1.90s;
+}
+
+.container-skills .oculto:nth-child(12){
+  transition: all 2.3s;
+}
+
+.container-skills .oculto:nth-child(14){
+  transition: all 2.75s;
+}
+
+.container-skills .oculto:nth-child(16){
+  transition: all 3.25s;
+}
+
+.container-skills .oculto:nth-child(18){
+  transition: all 3.80s;
+}
+
+.container-skills .oculto:nth-child(20){
+  transition: all 4.4s;
+}
+
+.container-skills .oculto:nth-child(22){
+  transition: all 5.05s;
+}
+
+.section-works.oculto{
+  transform: translateX(-50%);
+  transition: transform 2s, opacity 3s;
+  opacity: 0;
+}
+
+.section-works.muestra{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.section-works.saliendo{
+  transform: translateX(50%);
+  transition: transform 2s, opacity 1s;
+  opacity: 0;
+}
+
+.section-skills.saliendo{
+  transform: translateY(-50%);
+  transition: transform 2s, opacity 1s;
+  opacity: 0;
+}
+
+
 @media only screen{
   .modal-content {
     width: 100%;

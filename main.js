@@ -37,6 +37,20 @@ const proyectos = [{
 }]
 
 
+const obs = new IntersectionObserver((es) => {
+	es.forEach((e)=>{
+		if(e.isIntersecting){
+			e.target.classList.add("muestra");
+		}else{
+			e.target.classList.remove("muestra");
+		}
+	});
+});
+
+
+const elementos_ocultos = document.querySelectorAll('.oculto');
+elementos_ocultos.forEach((e)=> obs.observe(e));
+
 const separar = id =>{
 	const e = document.getElementById(id),
 		texto = e.innerText.split("");
@@ -55,8 +69,21 @@ function permahover(e,nombre){
 }
 
 function cambiar_seccion(inicio,final){
-	document.getElementById(inicio).classList.add("hidden");
-	document.getElementById(final).classList.remove("hidden");
+	ini = document.getElementById(inicio);
+
+	if(final == "main"){
+		ini.ontransitionend = () => {
+		ini.ontransitionend = () => {};
+		ini.classList.add("hidden");
+		ini.classList.remove("saliendo");
+		document.getElementById(final).classList.remove("hidden");
+		}
+		ini.classList.add("saliendo");
+	}else{
+		ini.classList.add("hidden");
+		document.getElementById(final).classList.remove("hidden");
+	}
+	
 
 }
 
@@ -137,6 +164,7 @@ function llenar_works(){
 	html+="</div>";
 	document.getElementById("contenedor-trabajos").innerHTML = html;
 }
+
 
 separar("p-skills");
 separar("p-works");

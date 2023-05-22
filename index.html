@@ -15,86 +15,85 @@ type="text/css">
 <body>
   <section id = "main" class="section-main ">
       <div class = "container-main" >
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra">David</p>
           <p class = "palabra">Noriega</p>
         </div>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra">full</p> 
           <p class = "palabra">stack</p> 
           <p class = "palabra">&</p> 
         </div>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra">Game</p> 
           <p class = "palabra">Developer</p> 
         </div>
-        
         <div class = "linea">
-          <p class = "palabra especial fondo-1" id="p-skills" onclick="cambiar_seccion('main','skills')">→skills</p> 
-          <p class = "palabra especial fondo-2" id="p-works" onclick="cambiar_seccion('main','works')">→works</p> 
+          <p class = "palabra especial fondo-1 oculto" id="p-skills" onclick="cambiar_seccion('main','skills')">→skills</p> 
+          <p class = "palabra especial fondo-2 oculto" id="p-works" onclick="cambiar_seccion('main','works')">→works</p> 
         </div>
         <div class = "linea">
-          <p class = "palabra especial fondo-3" id="p-refs">→refs</p> 
-          <p class = "palabra especial fondo-4" id="p-contact">→contact</p> 
+          <p class = "palabra especial fondo-3 oculto" id="p-refs">→refs</p> 
+          <p class = "palabra especial fondo-4 oculto" id="p-contact">→contact</p> 
         </div>
       </div>
   </section>
 
   <section id = "skills" class="section-skills hidden">
-    <p class="regreso" onclick="cambiar_seccion('skills','main')">←Back</p>
+    <p class="regreso oculto" onclick="cambiar_seccion('skills','main')">←Back</p>
       <div class = "container-skills">
-        <h1>Skills / Languages</h1>
+        <h1 class ="oculto">Skills / Languages</h1>
         <br>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'html')">html</p>
           <div class = "redondeado fondo-html"> </div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'js')">Javascript</p>
           <div class = "redondeado fondo-javascript"> </div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'python')">python</p>
           <div class = "redondeado fondo-python"> </div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'css')">css</p>
           <div class = "redondeado fondo-css"></div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'nodejs')">node js</p>
           <div class = "redondeado fondo-nodejs"></div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'react')">react</p>
           <div class = "redondeado fondo-react"> </div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'angular')">angular</p>
           <div class = "redondeado fondo-angular"></div>
         </div>
         <br>
         <br>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'spanish')">spanish</p>
           <div class = "redondeado fondo-spanish"> </div>
         </div>
         <br>
-        <div class = "linea">
+        <div class = "linea oculto">
           <p class = "palabra small" onmouseover="permahover(this,'english')">english</p>
           <div class = "redondeado fondo-english"></div>
         </div>
       </div>
   </section>
-  <section id = "works" class="section-works hidden">
+  <section id = "works" class="section-works hidden oculto">
     <p class = "regreso" onclick="cambiar_seccion('works','main')">←Back</p>
     <div id="myModal" class="modal">
       <span class="close" onclick="cerrar_modal()">&times;</span>
