@@ -10,6 +10,7 @@ type="text/css">
   <link  href="https://fonts.googleapis.com/css?family=Comfortaa" 
 rel="stylesheet" 
 type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -34,7 +35,7 @@ type="text/css">
         </div>
         <div class = "linea">
           <p class = "palabra especial fondo-3 oculto" id="p-refs">→refs</p> 
-          <p class = "palabra especial fondo-4 oculto" id="p-contact">→contact</p> 
+          <p class = "palabra especial fondo-4 oculto" id="p-contact" onclick="cambiar_seccion('main','contact')">→contact</p> 
         </div>
       </div>
   </section>
@@ -118,6 +119,21 @@ type="text/css">
       </div>
       </div>
     </div>
+  </section>
+
+  <section id = "contact" class="section-contact hidden oculto ">
+    <p class = "regreso" onclick="cambiar_seccion('contact','main')">←Back</p>
+      <div class = "container-contact">
+        <div class="linea-2">
+          <i class="fa-brands fa-whatsapp"></i>
+          <p id="telefono" class = "palabra" data-value="+502 5564 6028">+502 5564 6028</p> 
+        </div>
+        <div class="linea-2">
+          <i class="fa-solid fa-envelope"></i>
+          <p id="correo" class="palabra minus" data-value="Dabrahamnz02@gmail.com">Dabrahamnz02@gmail.com</p> 
+        </div>
+      </div>
+      <div class="container-contact-glow"></div>
   </section>
 </body>
 <script src="main.js"></script>

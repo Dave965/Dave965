@@ -1,4 +1,5 @@
-const proyectos = [{
+const proyectos = [
+{
 	nombre: "CWE",
 	desc: "CWE (coding with engineers), es una pagina web dedicada a proporcionar cursos gratuitos de programacion para principiantes, con el objetivo de incentivar a las personas a involucarse en las tecnologias modernas.",
 	imagenes: 5,
@@ -35,7 +36,6 @@ const proyectos = [{
 	folder : "ms",
 	link: ""
 }]
-
 
 const obs = new IntersectionObserver((es) => {
 	es.forEach((e)=>{
@@ -165,9 +165,39 @@ function llenar_works(){
 	document.getElementById("contenedor-trabajos").innerHTML = html;
 }
 
+function letras_random(container,texto, interval = null){  
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  container.onmouseenter = event => { 
+
+  let iteration = 0;
+  
+  clearInterval(interval);
+  
+  interval = setInterval(() => {
+    texto.innerText = texto.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return texto.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * 26)]
+      })
+      .join("");
+    
+    if(iteration >= texto.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1 / 3;
+  }, 10);
+  }
+}
 
 separar("p-skills");
 separar("p-works");
 separar("p-refs");
 separar("p-contact");
 llenar_works();
+letras_random(document.getElementsByClassName("linea-2")[0], document.getElementById("telefono"));
+letras_random(document.getElementsByClassName("linea-2")[1], document.getElementById("correo"));
